@@ -1,0 +1,50 @@
+#:kivy 1.0.9
+
+<Collection@Label>:
+    size_hint_y: None
+    height: self.parent.height/15
+    text_size: self.size
+    font_size: '25sp'
+    markup: True
+
+<CollectionCat>
+    GridLayout:
+        cols:1
+        Collection:
+            text: 'test'
+        Collection:
+            text: 'test'
+        Collection:
+            text: 'test'
+
+
+<MainWindow>:
+    category: category
+    GridLayout:
+        cols:1
+        ActionBar:
+            background_color:0,0,0,1
+            pos_hint: {'top':1}
+
+            ActionView:
+                ActionPrevious:
+                    with_previous: False
+                    app_icon: './assets/reorder-option.png'
+                    title: '[size=24][b]Meteor Collection[/b][/size]'
+                    markup: True
+                ActionButton:
+                    icon: './assets/sort-arrows-couple-pointing-up-and-down.png'
+
+        BoxLayout:
+            size_hint_y: None
+            height: root.height/16
+            Button:
+                text: 'New Cat'
+                pos_hint: {'top':1}
+            Button:
+                text: 'Edit'
+                pos_hint: {'top':1}
+
+        ScrollView:
+            Category:
+                id: category

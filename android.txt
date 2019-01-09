@@ -1,0 +1,3 @@
+title=Meteor
+author=Dorian Turba
+orientation=portrait

@@ -1,0 +1,24 @@
+#:kivy 1.0.9
+
+<Category>
+    name: name
+    description: description
+    size_hint_y: None
+    height: self.parent.height/15
+    row: 2
+    Label:
+        id: name
+        text: self.parent.name.text
+        size_hint_y: None
+        height: self.parent.height*2/3
+        text_size: self.size
+        font_size: '25sp'
+        markup: True
+    Label:
+        id: description
+        text: self.parent.name.text
+        size_hint_y: None
+        height: self.parent.height*1/3
+        text_size: self.size
+        font_size: '25sp'
+        markup: True
