@@ -1,5 +1,5 @@
 #!/bin/bash
 rm -rf ./dist
 rm -rf ./build
-pyinstaller -w ./chi_train.py
-cp sets.json ./dist/chi_train/
+pyinstaller -w ./main.py
+cp sets.json ./dist/main/

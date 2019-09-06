@@ -27,7 +27,7 @@ class Category(BoxLayout):
     name: StringProperty
     description: StringProperty
 
-    def __init__(self, name: str = 'Name', description: str= 'desc', **kwargs):
+    def __init__(self, name: str = 'Name', description: str = 'desc', **kwargs):
         super().__init__(**kwargs)
         self.name = StringProperty(name)
         self.description = StringProperty(description)
